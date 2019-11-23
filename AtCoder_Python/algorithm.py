@@ -137,3 +137,20 @@ union_a_b = a.union(b)  # 和集合
 intersection_a_b = a & b    # 積集合
 intersection_a_b = a.intersection(b)    # 積集合
 
+import numpy as np
+def getNearestValue(list, num):
+    """
+    概要: リストからある値に最も近い値を返却する関数
+    @param list: データ配列
+    @param num: 対象値
+    @return 対象値に最も近い値
+    """
+
+    # リスト要素と対象値の差分を計算し最小値のインデックスを取得
+    idx = np.abs(np.asarray(list) - num).argmin()
+    return list[idx]
+
+
+# リスト表示
+for a in lst:
+    print(*a)
