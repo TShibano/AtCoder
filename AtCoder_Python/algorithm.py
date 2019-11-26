@@ -1,3 +1,7 @@
+# リストのコピーは気をつけて
+import copy 
+copy_list = copy.deepcopy(original_list)
+
 # 約数列挙
 def make_divisors(n):
     divisors = []
@@ -54,6 +58,15 @@ def is_prime(N):
             return False
     return True
 
+# deque <- queueの代わりに使う
+from collections import deque
+que = deque()
+que.append(1)       # 末尾に追加
+que.popleft(1)      # 先頭を削除
+que[0]
+
+que.appendleft(1)   # 先頭に追加
+que.pop()           # 末尾を削除
 
 # heapqについて
 import heapq
@@ -62,6 +75,8 @@ heapq.heapify(lst)      # リストを優先度付きキューへ
 heapq.heappop(lst)      # 最小値の取り出し  O(log N)
 heapq.heappop(lst, -2)  # 要素の挿入
 # 最大値の取り出しはリストの各要素にマイナス1をかけた上で最小値として取り出す
+
+
 
 # 素因数分解
 def prime_factorization(N):
