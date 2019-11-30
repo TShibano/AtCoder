@@ -1,7 +1,9 @@
 # リストのコピーは気をつけて
 import copy 
+original_list = [1, 2, 3]
 copy_list = copy.deepcopy(original_list)
 
+# 
 # 約数列挙
 def make_divisors(n):
     divisors = []
@@ -110,6 +112,17 @@ def get_keta(N):
 # 階乗
 import math 
 math.factorial(10)
+
+# 順列全列挙
+import itertools
+all_permutation_list = itertools.permutations(lst)
+partial_permutation_list = itertools.permutations(lst, r=2)  # 長さ2の順列を返す
+
+# 順列の全ての長さにおけるパターンを出したい時
+all_all_permutation_list = []
+for i, _ in enumerate(lst, 1):
+    for tmp_list in itertools.permutations(lst, r=i):
+        all_all_permutation_list.append(tmp_list)
 
 # 組み合わせ
 from scipy.misc import comb         # AtCoder用
