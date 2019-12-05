@@ -23,3 +23,30 @@ for j in range(0, max_value+1):
         ans += 1
 
 print(ans)
+
+
+"""
+他人の解答-1
+setをうまく使う
+
+ans = [0]
+for p_value in p:
+    ans = list(set(ans + [a + p_value for a in ans]))
+print(len(ans))
+"""
+
+"""
+他人の解答-2
+X = sum(p)
+dp = [[0] * (X + 1) for _ in range(N+1)]
+dp[0][0] = 1
+
+for i in range(N):
+    for j in range(X + 1):
+        # i番目の問題まででj点が作れるならdp[i][j] = 1
+        if dp[i][j] == 1:
+            dp[i+1][j] = 1  # ここでi番目の時の情報がi+1番目に引き継がれる
+            dp[i+1][j+p[i]] = 1
+
+print(sum(dp[-1]))
+"""
