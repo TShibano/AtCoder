@@ -1,5 +1,5 @@
 # # Educational DP Contest D
-# 方針：dp[i][w] := i番目の物の中から，重さwを超えない時の価値の最大値
+# 方針：dp[i][w] := i-1番目の物の中から，重さwを超えない時の価値の最大値
 N, W = map(int, input().split())
 wv = [list(map(int, input().split())) for _ in range(N)]
 
