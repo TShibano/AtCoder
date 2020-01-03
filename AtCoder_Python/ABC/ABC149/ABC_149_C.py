@@ -9,7 +9,17 @@ def is_prime(N):
     return True
 
 X = int(input())
+
+# for文じゃなくてwhileを使う方が良い
+"""
 for i in range(X, 2 * 10 ** 7):
     if is_prime(i):
         print(i)
         exit()
+"""
+
+while 1:
+    if is_prime(X):
+        print(X)
+        exit()
+    X += 1    
