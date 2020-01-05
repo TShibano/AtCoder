@@ -182,3 +182,10 @@ def getNearestValue(list, num):
 # リスト表示
 for a in lst:
     print(*a)
+
+# リストの要素の個数について
+import collections
+lst = [1, 1, 1, 2, 2, 3, 4, 5, 6,]
+c = collections.Counter(lst)
+c.most_common()[0][0]   # lstの要素の内，最も個数が多いものの値
+c.most_common()[0][1]   # lstの要素の内，最も個数が多い物の個数
