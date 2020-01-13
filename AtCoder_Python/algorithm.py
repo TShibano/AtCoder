@@ -189,3 +189,16 @@ lst = [1, 1, 1, 2, 2, 3, 4, 5, 6,]
 c = collections.Counter(lst)
 c.most_common()[0][0]   # lstの要素の内，最も個数が多いものの値
 c.most_common()[0][1]   # lstの要素の内，最も個数が多い物の個数
+
+
+# 二分探索
+import bisect
+lst = [1, 4, 8, 14, 25]
+a = 10
+bisect.bisect_left(lst, a)  # 3 (14のところ)
+bisect.bisect_right(lst, a) # 3 (14のところ)
+
+lst = [1, 1, 1, 2, 2, 2, 2, 3, 3, 3]
+a = 1
+bisect.bisect_left(lst, a)  # 3
+bisect.bisect_right(lst, a) # 7
