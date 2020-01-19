@@ -3,7 +3,13 @@ import copy
 original_list = [1, 2, 3]
 copy_list = copy.deepcopy(original_list)
 
-# 
+# リストの個数列挙
+import collections
+lst = [1, 2, 2, 3, 3]
+c = collections.Counter(lst)
+c.most_common()[0][0]   # 最も多い個数の要素
+c.most_common()[0][1]   # 最も多い個数
+
 # 約数列挙
 def make_divisors(n):
     divisors = []
@@ -33,6 +39,10 @@ print(al)
 from fractions import gcd
 def lcm (x, y):
     return (x * y) // gcd(x, y)
+
+# 最小公倍数(リスト)
+def lcm_list(numbers):
+    return reduce(lcm_base, numbers, 1)
 
 # 公約数のリスト獲得
 def cf(X, Y):
