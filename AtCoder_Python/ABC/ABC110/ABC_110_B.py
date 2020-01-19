@@ -19,3 +19,4 @@ if flag:
     print("No War")
 else:
     print("War")
+
