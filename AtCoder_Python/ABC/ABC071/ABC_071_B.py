@@ -15,3 +15,15 @@ if len(ss) == 26:
     print('None')
 else:
     print(ans)
+
+
+S = input()
+S = set(list(S))
+alp = [chr(ord('a') + i) for i in range(26)]
+for al in alp:
+    if al in S:
+        pass
+    else:
+        print(al)
+        exit()
+print("None")
