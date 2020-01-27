@@ -40,6 +40,10 @@ if __name__ == "__main__":
 
 
 # 解説の解き方
+# 素数判定リストの作成(True / False)
+# 2017_like_number の個数リストの作成
+# 累積和で獲得
+
 N = 10**5
 prime_list = [True] * (N+1)        # True が素数
 count_list = [0] * (N+1)
