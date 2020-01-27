@@ -212,3 +212,21 @@ lst = [1, 1, 1, 2, 2, 2, 2, 3, 3, 3]
 a = 1
 bisect.bisect_left(lst, a)  # 3
 bisect.bisect_right(lst, a) # 7
+
+
+# 文字列
+s = "abcd"
+s = s.capitalize()  # s = "Abcd"
+
+
+# 素数リストを獲得(エラトステネスの篩, O(NloglogN) )
+def Get_Sieve_of_Eratosthenes(N):
+    prime_list = [2]
+    limit = int(N ** 0.5)
+    numeric_data = [i for i in range(3, N, 2)]
+    while True:
+        prime = numeric_data[0]
+        if prime >= limit:
+            return prime_list + numeric_data
+        prime_list.append(prime)
+        numeric_data = [x for x in numeric_data if x % prime != 0]
