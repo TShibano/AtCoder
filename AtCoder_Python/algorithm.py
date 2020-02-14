@@ -230,3 +230,20 @@ def Get_Sieve_of_Eratosthenes(N):
             return prime_list + numeric_data
         prime_list.append(prime)
         numeric_data = [x for x in numeric_data if x % prime != 0]
+
+
+# ランレングス圧縮 Run Length Encoding
+def RanLengthEncoding(S):
+    N = len(S)
+    RLE = []
+    now_char = S[0]
+    now_cnt = 1
+    for i in range(1, N):
+        if now_char == S[i]:
+            now_cnt += 1
+        else:
+            RLE.append([now_char, now_cnt])
+            now_char = S[i]
+            now_cnt = 1
+    RLE.append([now_char, now_cnt])
+    return RLE
