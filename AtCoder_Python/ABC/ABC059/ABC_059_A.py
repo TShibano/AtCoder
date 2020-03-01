@@ -1,5 +1,4 @@
 # ABC059A
-# A問題
 a, b, c = map(str, input().split())
 a = a.capitalize()
 b = b.capitalize()

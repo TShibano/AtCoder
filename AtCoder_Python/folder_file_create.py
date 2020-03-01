@@ -15,8 +15,8 @@ def create(start, end, S):      # S:list
             
 
 def main():
-    start = 126
-    end = 139
+    start = 149
+    end = 149
     S = ["A", "B", "C", "D", "E", "F"]
     create(start, end, S)
 
